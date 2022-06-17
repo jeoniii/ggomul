@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+## 이미지 첨부(하이퍼링크)   
+[NAVER](http://naver.com "NAVER")   
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 가로선
+---   
+***   
 
-## Available Scripts
+## 코드 블록   
+```	public String doSelectOne(UserVO inVO) throws SQLException {
+		LOG.debug("==========================");
+		LOG.debug("=======inVO======" + inVO);
+		LOG.debug("==========================");
 
-In the project directory, you can run:
+		UserVO outVO = userService.doSelectOne(inVO);
+		Gson gson = new Gson();
+		String jsonString = gson.toJson(outVO);
 
-### `npm start`
+		LOG.debug("==========================");
+		LOG.debug("=======jsonString======" + jsonString);
+		LOG.debug("==========================");
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+		return jsonString;
+	}
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 순서가 있는 목록(무조건 숫자는 순서대로 출력 됨)   
+1. 아이템 1 		
+2. 아이템 2   
+   5. 1단 하위 아이템
+      8. 1단 하위 아이템             
+9. 아이템 3   	
 
-### `npm test`
+- 아이템 1   
++ 아이템2   
+   - 1단의 하위 아이템
+   + 2단의 하위 아이템
+## 목록 : 기본적인 리스트 작성 방법(*, -, + 중에 선택하여 사용)   
+* 목록 이름   
+- 목록 이름   
++ 목록 이름   
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 인용상자 : [> 내용 형식] 으로 인용 상자를 작성할 수 있다.
+> 여기에 인용할 내용을 입력   
+빈 줄이 없으면 자동으로 인용상자에 포함 됨.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 문단 구분을 위한 강제 개행 : 줄의 마지막에 [SPACE BAR]를 두번 이상 눌러 띄어쓰기를 하면 된다.
+가나다   
+## 헤더 : [# 헤더 이름] 식으로 작성   
+# 헤더1   
+## 헤더2   
+### 헤더3    
+#### 헤더4    
+##### 헤더5     
