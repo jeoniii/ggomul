@@ -1,5 +1,5 @@
 ## 이미지 첨부   
-
+![사진](https://github.com/jeoniii/ggomul/blob/master/muslim-g450b91385_640.png)   
 
 ## 텍스트 강조   
 굵게 표시 : **오늘은 금요일**   
